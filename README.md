@@ -79,11 +79,12 @@ int main()
 
 # 심볼테이블
 
-int num이라고 선언을 하지만 컴퓨터가 num이란 변수를 이해할 수 없다.
-따라서 num이란 변수의 타입과 값이 저장된 주소를 매핑하여 테이블로 가지고 있어야 한다.
-![img](https://t1.daumcdn.net/cfile/tistory/153961354D9D78CD2D)
+int num이라고 선언을 하지만 컴퓨터가 num이란 변수를 이해할 수 없다.<br>
+따라서 num이란 변수의 타입과 값이 저장된 주소를 매핑하여 테이블로 가지고 있어야 한다.<br>
 
-컴파일러가 생성되면서 같이 생성되고, 컴파일 종료시에 같이 소멸됨.
+![img](https://t1.daumcdn.net/cfile/tistory/153961354D9D78CD2D) <br>
+
+컴파일러가 생성되면서 같이 생성되고, 컴파일 종료시에 같이 소멸됨. <br>
 
 
 # 함수의 변수 저장 위치
@@ -129,9 +130,9 @@ int main() {
 
 
 # malloc, calloc, realloc
-malloc은 void 리턴타입의 주소를 반환(쓰레기값 저장되어있음) `malloc(5*sizeof(int))`
-calloc은 malloc과 똑같지만 함수호출방식이 조금다르고, 메모리는 0으로 초기화 시켜줌 `calloc(5,sizeof(int))`
-realloc 메모리의 크기를 변화시킬때 사용
+malloc은 void 리턴타입의 주소를 반환(쓰레기값 저장되어있음) `malloc(5*sizeof(int))` <br>
+calloc은 malloc과 똑같지만 함수호출방식이 조금다르고, 메모리는 0으로 초기화 시켜줌 `calloc(5,sizeof(int))` <br>
+realloc 메모리의 크기를 변화시킬때 사용 <br>
 
 
 
