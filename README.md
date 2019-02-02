@@ -77,7 +77,7 @@ int main()
 ```
 
 
-# 매개변수, 리턴타입을 
+# 매개변수, 리턴타입을 함수포인터로 
 ```
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
