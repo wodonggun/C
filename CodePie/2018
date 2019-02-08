@@ -1,0 +1,167 @@
+1. 헬로 한화 출력
+
+2. 덧셈
+
+3. abcfedghi를 abcdefghi로 순서대로 출력
+
+4. 0~9중에서 가장 많이 나온 숫자
+
+5. 첫번째 줄은 그대로/ 그다음은 반대로 출력하는것 -> ILO / UEV => I LOVE U 출력
+
+6.
+
+7. dfs 배양후 개수가 젤 큰거 
+
+8. 1+(2-4)*2 스트링입력받은거 계산 
+
+9. 타임스탬프(로그출력?=가장 접속인원이 많았던 3초동안의 인원은)
+
+10. n*n 배열에서
+0 1 0 0 0 
+0 1 1 0 0
+0 0 0 0 1
+0 0 0 0 0
+블록길이 (3 과 1 출력) (걍 bfs하면될듯)
+
+
+11.  한화 불꽃놀이(행복하자 아뿌지말고)
+그냥 폭죽이 터지는 시간이 주어지고, 터질때 가까이가면 행복도를 얻는데 행복도의 최대값 출력
+
+
+
+http://blog.naver.com/PostView.nhn?blogId=shjce93&logNo=220886065567
+
+
+
+
+
+
+
+
+
+
+
+int str_len(char *str)
+{
+	int len = 0;
+	while (str[len] != '\0')len++;
+	return len;
+}
+
+void sol(char *str)
+{
+	int len = str_len(str);
+
+	
+	for (int i = 0; i < len; i++)
+	{
+		int max =i ;
+		for (int j = i; j < len ; j++)
+		{
+			if (str[j] > str[max])
+			{
+				max = j;
+			}
+		}
+		int tmp = str[i];
+		str[i] = str[max];
+		str[max] = tmp;
+	}
+
+}
+
+int main(void)
+{
+
+	char str[10] = "abfecgd";
+	sol(str);
+
+	printf("%s", str);
+	return 0;
+}
+
+
+=========================================
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int checksum[15];
+
+int str_len(char *str)
+{
+	int len = 0;
+	while (str[len] != '\0')len++;
+	return len;
+}
+
+void sol(char *str)
+{
+	int len = str_len(str);
+
+	
+	for (int i = 0; i < len; i++)
+	{
+		checksum[str[i] - '0']++;
+	}
+
+}
+
+int main(void)
+{
+
+	char str[20] = "010379233333864300";
+	sol(str);
+
+	int max = 0;
+	int max_num = 0;
+	for (int i = 0; i < 13; i++)
+	{
+		if (checksum[i] > max) {
+			max = checksum[i];
+			max_num = i;
+		}
+	}
+
+	printf("%d", max_num);
+	return 0;
+}
+
+
+
+==============================================
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int checksum[10];
+
+
+
+int main(void)
+{
+
+	int str = 214;
+	
+	while (str != 0)
+	{
+		int tmp = str % 10;
+		checksum[tmp]++;
+
+		str /= 10;
+	}
+
+	int max = 0;
+	int max_num = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		if (checksum[i] > max)
+		{
+			max = checksum[i];
+			max_num = i;
+		}
+	}
+	printf("%d", max_num);
+	return 0;
+}
+
+=========================================
