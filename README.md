@@ -182,9 +182,9 @@ int main() {
 
 
 # malloc, calloc, realloc
-malloc은 void 리턴타입의 주소를 반환(쓰레기값 저장되어있음) `malloc(5*sizeof(int))` <br>
-calloc은 malloc과 똑같지만 함수호출방식이 조금다르고, 메모리는 0으로 초기화 시켜줌 `calloc(5,sizeof(int))` <br>
-realloc 메모리의 크기를 변화시킬때 사용 <br>
+malloc은 void 리턴타입의 주소를 반환(쓰레기값 저장되어있음) `malloc(5*sizeof(int))`  
+calloc은 malloc과 똑같지만 함수호출방식이 조금다르고, 메모리는 0으로 초기화 시켜줌 `calloc(5,sizeof(int))`  
+realloc 메모리의 크기를 변화시킬때 사용  
 
 
 
