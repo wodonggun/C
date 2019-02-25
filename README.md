@@ -209,8 +209,32 @@ int main()
 ```
 
 
-- 구조체 사이즈  
- 구조체는 멤버 변수 중 가장 큰 데이터 배수값으로 크기 결정.  
+# 구조체 
+```
+#include <stdio.h>
+
+struct data {
+	char data1;
+	short data2;
+	int data3;
+	char data4;
+};
+
+struct data2 {
+	char data1;
+	char data4;
+	short data2;
+	int data3;
+};
+
+int main()
+{
+	printf("%d", sizeof(data));
+	printf("%d", sizeof(data2));
+}
+```
+
+ - 구조체는 멤버 변수 중 가장 큰 데이터 배수값으로 크기 결정.  
  1바이트형은 모든 주소지에 기록 가능  
  2바이트형은 2byte boundary에 정렬 (4바이트의 메모리에서 2의 배수 주소로만 할당)  
  4바이트형은 4byte boundary에 정렬   
