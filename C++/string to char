@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string>
+
+int main()
+{
+
+	string a = "best";
+	char b[10];
+
+	const char *str = a.c_str();
+
+	int i;
+	for(i=0;i<a.size();i++)
+		b[i] = *(str+i);
+	b[i] = '\0';
+
+	printf("%s", b);
+
+	return 0;
+
+}
